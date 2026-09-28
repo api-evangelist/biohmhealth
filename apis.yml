@@ -1,23 +1,70 @@
 aid: biohmhealth
+
 name: Biohmhealth
-description: 'Biohmhealth is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cdn.shopify.com/s/files/1/1713/4291/files/logo-dark.png?height=628&pad_color=fff&v=1613725166&width=1200
+
+description: BIOHM Health provides probiotic supplements, super greens powders, and colon cleanse products aimed at healing leaky gut and supporting
+  a healthy microbiome. The company operates an e‑commerce storefront offering gut‑testing kits, wellness consultations, and a rewards program
+  for customers seeking digestive health solutions.
+
 url: https://raw.githubusercontent.com/api-evangelist/biohmhealth/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
-- Company
-apis: []
+- Health
+- Probiotics
+- Supplements
+- Gut Health
+- E-commerce
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/biohmhealth-llms.txt
+- type: WellKnown
+  url: well-known/biohmhealth-well-known.yml
+- type: Hosts
+  url: hosts/biohmhealth-hosts.yml
+- type: Vendors
+  url: vendors/biohmhealth-vendors.yml
+- type: TermsOfService
+  url: https://www.biohmhealth.com/pages/terms-of-service
+- type: Support
+  url: https://www.biohmhealth.com/pages/help-center
+- type: Newsroom
+  url: https://www.biohmhealth.com/blogs/news
+- type: DomainSecurity
+  url: security/biohmhealth-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/biohmhealth
+  url: https://www.biohmhealth.com
+
+apis:
+- name: GraphQL API
+  description: GraphQL endpoint providing schema for Biohmhealth's e‑commerce platform.
+  humanURL: https://www.biohmhealth.com/api/graphql
+  baseURL: https://www.biohmhealth.com
+  aid: biohmhealth:graphql-api
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
